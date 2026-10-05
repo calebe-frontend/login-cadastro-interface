@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interface demonstrativa de login e cadastro.">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <main class="base" id="painel-principal">
+        <section class="Flogin" aria-labelledby="titulo-login">
+            <form id="form-login">
+                <h1 id="titulo-login">Login</h1>
+                <label class="sr-only" for="email-login">Email</label>
+                <input id="email-login" name="email" type="email" placeholder="Email"
+                       autocomplete="email" required>
+                <label class="sr-only" for="senha-login">Senha</label>
+                <input id="senha-login" name="senha" type="password" placeholder="Senha"
+                       autocomplete="current-password" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <section class="Fcadastro" aria-labelledby="titulo-cadastro" inert>
+            <form id="form-cadastro">
+                <h1 id="titulo-cadastro">Cadastrar-se</h1>
+                <label class="sr-only" for="nome-cadastro">Nome</label>
+                <input id="nome-cadastro" name="nome" type="text" placeholder="Nome"
+                       autocomplete="name" minlength="2" required>
+                <label class="sr-only" for="email-cadastro">Email</label>
+                <input id="email-cadastro" name="email" type="email" placeholder="Email"
+                       autocomplete="email" required>
+                <label class="sr-only" for="senha-cadastro">Senha</label>
+                <input id="senha-cadastro" name="senha" type="password" placeholder="Senha"
+                       autocomplete="new-password" minlength="8" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <aside class="painel" aria-live="polite">
+            <h2 class="mensagem">Olá, amigo!</h2>
+            <p class="mensagem1">Cadastre-se para começar</p>
+            <button class="registrar" type="button" aria-controls="form-cadastro"
+                    aria-expanded="false">Registrar</button>
+            <div class="redes" aria-label="Rede social">
+                <span><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</span>
+            </div>
+        </aside>
+
+        <p class="status" id="mensagem-status" role="status" aria-live="polite"></p>
+    </main>
+</body>
+</html>
